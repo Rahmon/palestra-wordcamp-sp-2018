@@ -10,10 +10,17 @@
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>    
 
     <script>
-        const Hello = React.createElement( 'div', {}, 
-            React.createElement( 'h1', {}, 'Hello World' ) );
+        const Hello = 
+            React.createElement( 'div', {}, 
+                React.createElement( 'h1', {}, 'Hello World' ),
+                React.createElement( 'ul', {}, 
+                    React.createElement( 'li', {}, 'WordPress' ),
+                    React.createElement( 'li', {}, 'JavaScript' ) 
+                )
+            );
 
         ReactDOM.render( Hello, document.getElementById( 'root' ) );
     </script>
 </body>
 </html>
+
