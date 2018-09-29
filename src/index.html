@@ -14,8 +14,8 @@
 
         function Titulo(props) {
             return (
-                <h1 className="titulo">
-                    Hello World
+                <h1 className={props.className}>
+                    {props.texto}
                 </h1>
             )
         }
@@ -23,16 +23,17 @@
         function Lista(props) {
             return (
                 <ul>
-                    <li>WordPress</li>
-                    <li>JavaScript</li>
+                    {props.itens.map( function (item) {
+                        return <li>{item}</li>
+                    } ) }
                 </ul>
             )
         }
 
         const App = 
             <div>
-                <Titulo />
-                <Lista />
+                <Titulo className="titulo" texto="Hello World" />
+                <Lista itens={['WordPress', 'JavaScript']} />
             </div>
 
         ReactDOM.render( App, document.getElementById( 'root' ) );
