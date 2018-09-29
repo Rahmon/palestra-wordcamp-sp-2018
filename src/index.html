@@ -12,16 +12,30 @@
 
     <script type="text/babel">
 
-        const Hello = 
-            <div>
-                <h1>Hello World</h1>
+        function Titulo(props) {
+            return (
+                <h1 className="titulo">
+                    Hello World
+                </h1>
+            )
+        }
+        
+        function Lista(props) {
+            return (
                 <ul>
                     <li>WordPress</li>
                     <li>JavaScript</li>
                 </ul>
+            )
+        }
+
+        const App = 
+            <div>
+                <Titulo />
+                <Lista />
             </div>
 
-        ReactDOM.render( Hello, document.getElementById( 'root' ) );
+        ReactDOM.render( App, document.getElementById( 'root' ) );
 
     </script>
 </body>
