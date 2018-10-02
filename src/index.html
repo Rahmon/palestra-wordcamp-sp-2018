@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Uma breve introdução ao React - WordCampSP 2018</title>
+    <meta charset="UTF-8">
 </head>
 <body>
     <div id="root"></div>
@@ -30,10 +31,23 @@
             )
         }
 
+        class NoticiasWordPress extends React.Component {
+            render() {
+                return (
+                    <div>
+                        <Titulo texto="Notícias WordPress" />
+                        <button>Carregar</button>
+                        <Lista itens={[]} />
+                    </div>
+                )
+            }
+        }
+
         const App = 
             <div>
                 <Titulo className="titulo" texto="Hello World" />
                 <Lista itens={['WordPress', 'JavaScript']} />
+                <NoticiasWordPress />
             </div>
 
         ReactDOM.render( App, document.getElementById( 'root' ) );
