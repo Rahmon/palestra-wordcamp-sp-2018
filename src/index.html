@@ -36,7 +36,7 @@
                 super(props);
                 
                 this.state = {
-                    noticias: []
+                    noticias: [],
                 };
 
                 this.carregarNoticias = this.carregarNoticias.bind(this);
@@ -45,6 +45,7 @@
             carregarNoticias() {
                 const API_URL = 'https://wordpress.org/news/wp-json/wp/v2/posts?per_page=5';
 
+                this.setState({carregandoNoticias: true});
                 fetch(API_URL)
                     .then(function (resultado) {
                         return resultado.json()
@@ -62,11 +63,16 @@
                     .catch(function (erro) {
                         this.setState({erro: erro})
                     }.bind(this))
+                    .then(function () {
+                        this.setState({carregandoNoticias: false})
+                    }.bind(this))
             }
 
             render() {
                 if (this.state.erro) {
                     return <p>Ocorreu um erro</p>
+                } else if (this.state.carregandoNoticias) {
+                    return <p>Carregando...</p>
                 } else {
                     return (
                         <div>
