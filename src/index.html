@@ -43,7 +43,7 @@
             }
 
             carregarNoticias() {
-                const API_URL = 'https://wordpress.org/news/wp-json/wp/v2/postsd?per_page=5';
+                const API_URL = 'https://wordpress.org/news/wp-json/wp/v2/posts?per_page=5';
 
                 fetch(API_URL)
                     .then(function (resultado) {
@@ -65,15 +65,19 @@
             }
 
             render() {
-                return (
-                    <div>
-                        <Titulo texto="Notícias WordPress" />
-                        <button onClick={this.carregarNoticias}>
-                            Carregar
-                        </button>
-                        <Lista itens={this.state.noticias} />
-                    </div>
-                )
+                if (this.state.erro) {
+                    return <p>Ocorreu um erro</p>
+                } else {
+                    return (
+                        <div>
+                            <Titulo texto="Notícias WordPress" />
+                            <button onClick={this.carregarNoticias}>
+                                Carregar
+                            </button>
+                            <Lista itens={this.state.noticias} />
+                        </div>
+                    )
+                }
             }
         }
 
