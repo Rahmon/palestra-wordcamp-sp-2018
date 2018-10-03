@@ -9,7 +9,7 @@
 
     <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>    
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>  
 
     <script type="text/babel">
 
@@ -30,14 +30,48 @@
                 </ul>
             )
         }
-
+        
         class NoticiasWordPress extends React.Component {
+            constructor(props) {
+                super(props);
+                
+                this.state = {
+                    noticias: []
+                };
+
+                this.carregarNoticias = this.carregarNoticias.bind(this);
+            }
+
+            carregarNoticias() {
+                const API_URL = 'https://wordpress.org/news/wp-json/wp/v2/postsd?per_page=5';
+
+                fetch(API_URL)
+                    .then(function (resultado) {
+                        return resultado.json()
+                    })
+                    .then(function (noticias) {
+                        const noticiasTitulo = noticias.map(function(noticia) {
+                            return noticia.title.rendered;
+                        });
+                        
+                        this.setState({
+                            noticias: noticiasTitulo
+                        })
+                        
+                    }.bind(this))
+                    .catch(function (erro) {
+                        this.setState({erro: erro})
+                    }.bind(this))
+            }
+
             render() {
                 return (
                     <div>
                         <Titulo texto="Notícias WordPress" />
-                        <button>Carregar</button>
-                        <Lista itens={[]} />
+                        <button onClick={this.carregarNoticias}>
+                            Carregar
+                        </button>
+                        <Lista itens={this.state.noticias} />
                     </div>
                 )
             }
