@@ -76,7 +76,7 @@
                 } else {
                     return (
                         <div>
-                            <Titulo texto="Notícias WordPress" />
+                            <Titulo texto={this.props.titulo} />
                             <button onClick={this.carregarNoticias}>
                                 Carregar
                             </button>
@@ -91,7 +91,7 @@
             <div>
                 <Titulo className="titulo" texto="Hello World" />
                 <Lista itens={['WordPress', 'JavaScript']} />
-                <NoticiasWordPress />
+                <NoticiasWordPress titulo="Notícias WordPress" />
             </div>
 
         ReactDOM.render( App, document.getElementById( 'root' ) );
