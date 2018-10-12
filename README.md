@@ -11,5 +11,5 @@
   * [Adição do componente NoticiasWordPress](https://github.com/Rahmon/palestra-wordcamp-sp-2018/blob/3a6af87d4a0df4676c80861ec88d88c260941cd3/src/index.html)
   * [Adição da função que carrega as notícias](https://github.com/Rahmon/palestra-wordcamp-sp-2018/blob/814e2c237a34b1570ff3d9a2f27b859c435794eb/src/index.html)
   * [Atualização para exibir uma mensagem de erro quando não for possível carregar as notícias](https://github.com/Rahmon/palestra-wordcamp-sp-2018/blob/489c67219ef5f08a867a64bc3be0a6f5d4d89146/src/index.html)
-  * [Atualização para exibir uma mensaem quando as notícias estiverem sendo carregadas (bônus - não tem no slide.. :stuck_out_tongue_winking_eye:)](https://github.com/Rahmon/palestra-wordcamp-sp-2018/blob/aeaf546c1f0013f8cc0d79098fdf67025854e6c7/src/index.html)
+  * [Atualização para exibir uma mensaem quando as notícias estiverem sendo carregadas ](https://github.com/Rahmon/palestra-wordcamp-sp-2018/blob/aeaf546c1f0013f8cc0d79098fdf67025854e6c7/src/index.html)(bônus - não tem no slide.. :stuck_out_tongue_winking_eye:)
 
