@@ -1,6 +1,7 @@
 # Uma breve introdução ao React (WordCamp São Paulo 2018)
 
 * [Slides da palestra :computer:](https://docs.google.com/presentation/d/e/2PACX-1vTuYONkaM1ZQ-aYWn9eC_0nGS7dJwoSopfcDoRS9bXsp1hpbI-HjcVfk7pQIipQSpjajm6az2TtV0Tg/pub?start=false&loop=false&delayms=3000&slide=id.g25e0411ed4_0_201)
+  * Ferramenta que utilizei para "formatar" o código: [SlidesCodeHighlighter](https://romannurik.github.io/SlidesCodeHighlighter/)
 * Código da aplicação :hammer_and_wrench:
   * [Inserção da biblioteca React](https://github.com/Rahmon/palestra-wordcamp-sp-2018/tree/8728fb0b06c1e2d8a43a74df4f472e392ce01b42/src/index.html)
   * [Imprimindo "Hello World"](https://github.com/Rahmon/palestra-wordcamp-sp-2018/tree/ec222c9cdd636e8b774cdf99dca98eafb49151d5/src/index.html)
