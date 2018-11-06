@@ -1,0 +1,20 @@
+{
+  "name": "apresentacao-wcsp-2018",
+  "version": "1.0.0",
+  "description": "Mesma apresentação, mas agora escrita com React.. xD",
+  "main": "index.js",
+  "scripts": {
+    "start": "mdx-deck index.mdx",
+    "build": "mdx-deck build index.mdx"
+  },
+  "keywords": [
+    "wcsp",
+    "wordpress",
+    "react"
+  ],
+  "author": "Rahmon",
+  "license": "ISC",
+  "devDependencies": {
+    "mdx-deck": "^1.7.7"
+  }
+}
